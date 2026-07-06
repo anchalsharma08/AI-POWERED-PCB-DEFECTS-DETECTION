@@ -1,0 +1,15 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+dataset/raw/
+runs/
+*.pt
+
+node_modules/
+dist/
+
+.vscode/
+.DS_Store

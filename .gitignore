@@ -1,0 +1,30 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Dataset
+dataset/
+DeepPCB-master/
+
+# YOLO outputs
+runs/
+results/
+
+# Model weights
+*.pt
+
+# Node
+node_modules/
+dist/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+
+# Experimental folder (if not source code)
+AI/

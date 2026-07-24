@@ -196,7 +196,7 @@ def process_dataset():
                 OUTPUT_DATASET
                 / split
                 / "images"
-                / image_path.name
+                / f"{image_id}.jpg"
             )
 
             output_label = (
@@ -258,6 +258,4 @@ if __name__ == "__main__":
 
     print("=" * 50)
 
-    
-    process_dataset()
-
+process_dataset()

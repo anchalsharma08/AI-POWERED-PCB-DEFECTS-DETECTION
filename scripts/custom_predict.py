@@ -19,7 +19,7 @@ model_path = (
     / "best.pt"
 )
 
-image_path = PROJECT_ROOT / "test_images" / "pcb8.jpg"
+image_path = PROJECT_ROOT / "test_images" / "pcb1.jpg"
 
 # ----------------------------
 # Load Model
@@ -41,7 +41,7 @@ class_names = {
 # ----------------------------
 # Run Prediction
 # ----------------------------
-results = model(str(image_path), conf=0.25)
+results = model(str(image_path), conf=0.05)
 
 # ----------------------------
 # Read Image
@@ -51,7 +51,7 @@ img = cv2.imread(str(image_path))
 # Different colors for each defect
 colors = {
     0: (0, 0, 255),        # Red
-    1: (255, 0, 0),        # Blue
+    1: (255, 0, 0),      # Bath rgb(24, 4, 247)
     2: (0, 255, 0),        # Green
     3: (0, 255, 255),      # Yellow
     4: (255, 0, 255),      # Purple
@@ -100,14 +100,14 @@ for result in results:
             -1
         )
 
-        # White Text
+        # rgb(0, 0, 0) Text
         cv2.putText(
             img,
             label,
             (x1+3, y1-5),
             cv2.FONT_HERSHEY_SIMPLEX,
             2,
-            (240,86,25),
+            (0,0,0),
             2
         )
 

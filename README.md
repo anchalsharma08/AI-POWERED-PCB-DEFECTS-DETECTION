@@ -11,3 +11,10 @@
 ✔ Image popup
 
 ✔ Model evaluation completed
+
+#Project Overview
+#System Architecture
+#Model Performance
+#Smaple Predictions
+#Technologies Used
+#How to run this project

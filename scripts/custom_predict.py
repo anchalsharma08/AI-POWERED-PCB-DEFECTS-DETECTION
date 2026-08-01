@@ -19,7 +19,7 @@ model_path = (
     / "best.pt"
 )
 
-image_path = PROJECT_ROOT / "test_images" / "pcb1.jpg"
+image_path = PROJECT_ROOT / "test_images" / "pcb2.jpg"
 
 # ----------------------------
 # Load Model

@@ -28,3 +28,12 @@ dist/
 
 # Experimental folder (if not source code)
 AI/
+
+
+# Generated files
+backend/uploads/*
+backend/results/*
+
+# Keep the folders
+!backend/uploads/.gitkeep
+!backend/results/.gitkeep

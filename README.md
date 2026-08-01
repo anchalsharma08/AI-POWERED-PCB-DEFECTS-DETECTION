@@ -171,7 +171,7 @@ uvicorn backend.app:app --reload
 
 ### Swagger UI
 
-![Swagger](evaluation/swagger.png)
+![Swagger](evaluation/swagger_ui.png)
 
 ### Detection Result
 

@@ -30,7 +30,6 @@ Thumbs.db
 # Experimental folder (if not source code)
 AI/
 
-
 # Generated files
 backend/uploads/*
 backend/results/*
@@ -38,3 +37,7 @@ backend/results/*
 # Keep the folders
 !backend/uploads/.gitkeep
 !backend/results/.gitkeep
+
+# Ignore uploaded images
+backend/backend/uploads/*
+!backend/backend/uploads/.gitkeep

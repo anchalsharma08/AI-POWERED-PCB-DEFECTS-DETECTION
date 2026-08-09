@@ -25,6 +25,7 @@ dist/
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Experimental folder (if not source code)
 AI/

@@ -1,6 +1,6 @@
 fastapi==0.141.1
 numpy==2.5.1
-opencv-python==5.0.0.93
+opencv-python-headless==4.10.0.84
 pillow==12.3.0
 python-multipart==0.0.32
 torch==2.12.1

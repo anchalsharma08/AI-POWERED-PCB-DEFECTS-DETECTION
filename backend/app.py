@@ -8,6 +8,7 @@ from services.analysis import generate_analysis
 from fastapi import Request
 import shutil
 import os
+import traceback
 
 from predictor import predict_image
 
@@ -92,6 +93,7 @@ async def predict(request: Request, file: UploadFile = File(...)):
     file.filename
     )
     except Exception as e:
+        traceback.print_exc()
         raise HTTPException(
             status_code=500,
             detail=f"Prediction failed: {str(e)}"

@@ -11,16 +11,7 @@ RESULT_DIR = PROJECT_ROOT / "backend" / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
 
 #Model Path 
-MODEL_PATH = (
-    PROJECT_ROOT 
-    / "trained_results"
-    / "runs"
-    / "detect"
-    / "results"
-    / "pcb_detector"
-    / "weights"
-    / "best.pt"
-)
+MODEL_PATH = PROJECT_ROOT / "backend" / "models" / "best.pt"
 
 #load model only once
 model = YOLO(str(MODEL_PATH))

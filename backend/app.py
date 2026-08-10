@@ -5,6 +5,7 @@ from predictor import get_model_info
 from fastapi import UploadFile, File, HTTPException
 from pathlib import Path
 from services.analysis import generate_analysis
+from fastapi import Request
 import shutil
 import os
 
@@ -19,7 +20,8 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173"
+        "http://localhost:5173",
+        "https://ai-powered-pcb-defects-detection-69w8x2uz7-aimers3.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -40,7 +42,7 @@ app.mount(
 )
 
 
-UPLOAD_DIR = Path("backend/uploads")
+UPLOAD_DIR = Path("uploads")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
@@ -58,7 +60,7 @@ Returns:
 - URL of the annotated result image
 """
 )
-async def predict(file: UploadFile = File(...)):
+async def predict(request: Request, file: UploadFile = File(...)):
 
      # Check if a file was selected
     if not file.filename:
@@ -97,7 +99,7 @@ async def predict(file: UploadFile = File(...)):
 
     result_filename = Path(result["result_image"]).name
 
-    result_image_url = f"http://127.0.0.1:8000/results/{result_filename}"
+    result_image_url = f"{request.base_url}results/{result_filename}"
 
     return {
     "status": "success",

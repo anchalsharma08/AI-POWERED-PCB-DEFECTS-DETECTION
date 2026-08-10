@@ -13,8 +13,11 @@ DeepPCB-master/
 runs/
 results/
 
-# Model weights
+# Ignore all model weights
 *.pt
+
+# Except deployment model
+!backend/models/best.pt
 
 # Node
 node_modules/

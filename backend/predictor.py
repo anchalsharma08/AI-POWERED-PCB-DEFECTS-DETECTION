@@ -3,13 +3,10 @@ from pathlib import Path
 from ultralytics import YOLO
 
 #Project Root 
-PROJECT_ROOT = Path(__file__).resolve().parent
-
-
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 #result directory 
 RESULT_DIR = PROJECT_ROOT / "backend" / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
-
 #Model Path 
 MODEL_PATH = PROJECT_ROOT / "backend" / "models" / "best.pt"
 
@@ -21,8 +18,6 @@ def get_model_info():
         "model_path":str(MODEL_PATH),
         "classes":model.names
     }
-
-
 # ==========================================
 # Prediction Function
 # ==========================================

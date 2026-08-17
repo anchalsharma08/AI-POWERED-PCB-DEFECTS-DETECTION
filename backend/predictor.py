@@ -3,7 +3,7 @@ from pathlib import Path
 from ultralytics import YOLO
 
 #Project Root 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent
 
 
 #result directory 

@@ -1,6 +1,9 @@
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI
+import subprocess
+print(subprocess.check_output(["pip", "freeze"]).decode())
+
 from predictor import get_model_info
 from fastapi import UploadFile, File, HTTPException
 from pathlib import Path

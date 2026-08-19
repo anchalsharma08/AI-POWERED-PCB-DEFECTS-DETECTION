@@ -25,7 +25,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://vercel.com/aimers3/ai-powered-pcb-defects-detection/5Erk5LW78LWxKpyb8GUnf67TP6i3"
+        "https://ai-powered-pcb-defects-detection.vercel.app"
 
     ],
     allow_credentials=True,

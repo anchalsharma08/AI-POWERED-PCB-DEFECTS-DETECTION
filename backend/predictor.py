@@ -8,7 +8,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent
 RESULT_DIR = PROJECT_ROOT / "backend" / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
 #Model Path 
-MODEL_PATH = PROJECT_ROOT / "backend" / "models" / "best.pt"
+MODEL_PATH = PROJECT_ROOT  / "models" / "best.pt"
 
 print("=" * 50)
 print("PROJECT_ROOT :", PROJECT_ROOT)

@@ -3,7 +3,7 @@ from pathlib import Path
 from ultralytics import YOLO
 
 #Project Root 
-PROJECT_ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 #result directory 
 RESULT_DIR = PROJECT_ROOT / "backend" / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)

@@ -16,6 +16,23 @@ print("MODEL_PATH   :", MODEL_PATH)
 print("MODEL EXISTS :", MODEL_PATH.exists())
 print("=" * 50)
 
+
+import os
+
+print("=" * 60)
+print("Current directory:", os.getcwd())
+print("PROJECT_ROOT:", PROJECT_ROOT)
+print("Files in /app:")
+print(os.listdir("/app"))
+
+if os.path.exists("/app/models"):
+    print("Models folder:", os.listdir("/app/models"))
+
+if os.path.exists("/app/backend"):
+    print("Backend folder:", os.listdir("/app/backend"))
+
+print("=" * 60)
+
 #load model only once
 model = YOLO(str(MODEL_PATH))
 

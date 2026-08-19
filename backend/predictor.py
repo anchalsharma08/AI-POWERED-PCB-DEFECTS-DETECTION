@@ -5,7 +5,7 @@ from ultralytics import YOLO
 #Project Root 
 PROJECT_ROOT = Path(__file__).resolve().parent
 #result directory 
-RESULT_DIR = PROJECT_ROOT / "backend" / "results"
+RESULT_DIR = PROJECT_ROOT  / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
 #Model Path 
 MODEL_PATH = PROJECT_ROOT  / "models" / "best.pt"

@@ -10,6 +10,12 @@ RESULT_DIR.mkdir(parents=True, exist_ok=True)
 #Model Path 
 MODEL_PATH = PROJECT_ROOT / "backend" / "models" / "best.pt"
 
+print("=" * 50)
+print("PROJECT_ROOT :", PROJECT_ROOT)
+print("MODEL_PATH   :", MODEL_PATH)
+print("MODEL EXISTS :", MODEL_PATH.exists())
+print("=" * 50)
+
 #load model only once
 model = YOLO(str(MODEL_PATH))
 
